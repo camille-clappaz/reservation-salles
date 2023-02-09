@@ -6,6 +6,16 @@
 .list1{
   color: wheat;
 }
+.nom {
+  font-size: 250%;
+  line-height: 120%;
+  margin-top: 10%;
+}
+.description {
+  font-size: 150%;
+  line-height: 120%;
+  margin: 5%;
+}
 .menu {
     margin-top: 0;
     display: flex;

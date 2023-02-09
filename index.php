@@ -28,8 +28,8 @@
                         </div>
 
                         <div class="box-back">
-                            <h1>Yasmine</h1><br>
-                            <p>blablabla</p><br>
+                            <h1 class="nom">Yasmine</h1><br>
+                            <p class="description">Etudiante passionée de programmation.</br>Ce que j'aime dans la vie? Jouer a LoL et developper des sites web ^^</p><br>
                         </div>
                     </div>
                 </div>
@@ -40,8 +40,8 @@
                         </div>
 
                         <div class="box-back">
-                            <h1>Camille</h1><br>
-                            <p>blablabla</p><br>
+                            <h1 class="nom">Camille</h1><br>
+                            <p class="description">blablabla</p><br>
 
                         </div>
                     </div>
