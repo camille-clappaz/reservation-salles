@@ -3,7 +3,9 @@
     padding:0;
 }
 /* header */
-
+.list1{
+  color: wheat;
+}
 .menu {
     margin-top: 0;
     display: flex;

@@ -19,10 +19,10 @@
                     <li><a class="list1" href="profil.php">Profil</a></li>
                     <?php //} 
                     ?> -->
-                    <li><a class="list1" href=".php">Reservation</a>
+                    <li  class="list1">Reservation
                         <ul class="sub-menu">
-                            <li><a class="list1" href=".php">Planning</a></li>
-                            <li><a class="list1" href=".php">Formulaire de réservation</a></li>
+                            <li><a class="list1" href="planning.php">Planning</a></li>
+                            <li><a class="list1" href="reservation.php">Formulaire de réservation</a></li>
                         </ul>
                     </li>
                 </ul>
