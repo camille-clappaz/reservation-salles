@@ -18,13 +18,13 @@
                 <h1>Bienvenue au cinéma de Toulon</h1>
             </div>
         </div>
-
+    
+        <h2 class="titre2">Qui sommes nous ?</h2>
         <div class="cards">
-            
                 <div class="box">
                     <div class="box-inner">
                         <div class="box-front">
-                            <img src="../reservation-salles/" alt="">
+                            <img src="img/yas.jpg" alt="">
                         </div>
 
                         <div class="box-back">

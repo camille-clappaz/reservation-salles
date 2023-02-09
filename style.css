@@ -67,9 +67,15 @@
 .titre{
     color:wheat;
     text-align: center;
- 
-    /* margin et padding auto pour centrer */
-   font-size: 300%;
+    text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.90);
+    font-family: sans-serif;
+    font-size: 300%;
+}
+.titre2 {
+    margin: 3%;
+    text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.90);
+    font-family: sans-serif;
+    font-size: 300%;
 }
 /* cartes qui se retournent */
 .box {
