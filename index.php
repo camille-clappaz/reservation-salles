@@ -10,45 +10,46 @@
 </head>
 
 <body class="body1">
-<?php include("header-include.php");?>
+    <?php include("header-include.php"); ?>
 
     <main>
         <div class="bienvenue">
             <div class="titre">
                 <h1>Bienvenue au cinéma de Toulon</h1>
-            </div> 
+            </div>
         </div>
 
         <div class="cards">
-        <div class="box">
-            <div class="box">
-                <div class="box-inner">
-                    <div class="box-front">
-                        <img src="../camille/img/lacplitvice.jpg" alt="">
-                    </div>
+            
+                <div class="box">
+                    <div class="box-inner">
+                        <div class="box-front">
+                            <img src="../reservation-salles/" alt="">
+                        </div>
 
-                    <div class="box-back">
-                        <h1>Yasmine</h1><br>
-                        <p>blablabla</p><br>
+                        <div class="box-back">
+                            <h1>Yasmine</h1><br>
+                            <p>blablabla</p><br>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="box">
-                <div class="box-inner">
-                    <div class="box-front">
-                        <img src="/camille.jpg" alt="">
-                    </div>
+                <div class="box">
+                    <div class="box-inner">
+                        <div class="box-front">
+                            <img class="camille" src="img/camille.jpg" alt="">
+                        </div>
 
-                    <div class="box-back">
-                        <h1>Camille</h1><br>
-                        <p>blablabla</p><br>
+                        <div class="box-back">
+                            <h1>Camille</h1><br>
+                            <p>blablabla</p><br>
 
+                        </div>
                     </div>
                 </div>
-            </div>
+            
         </div>
     </main>
-    <?php include("footer-include.php");?>
+    <?php include("footer-include.php"); ?>
 </body>
 
 </html>
