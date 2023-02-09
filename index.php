@@ -10,33 +10,45 @@
 </head>
 
 <body class="body1">
+<?php include("header-include.php");?>
 
-    <header>
-        <div class="head">
-            <nav>
-                <ul class="menu">
-                    <li><a class="titremenu" href="index.php">Home</a></li>
-                    <li><a class="titremenu" href="inscription.php">Inscription</a></li>
-                    <li><a class="titremenu" href="connexion.php">Connexion</a></li>
-                    <!-- <?php // if (isset($_SESSION['login']) == TRUE) {?> 
-                    <li><a class="titremenu" href="profil.php">Profil</a></li>
-                    <?php //} ?> -->
-                    <li><a class="titremenu" href=".php">Reservation</a>
-                        <ul>
-                            <li><a class="titremenu" href=".php">Planning</a></li>
-                            <li><a class="titremenu" href=".php">Formulaire de réservation</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
+    <main>
+        <div class="bienvenue">
+            <div class="titre">
+                <h1>Bienvenue au cinéma de Toulon</h1>
+            </div> 
         </div>
-    </header> 
 
-    <!-- Body -->
+        <div class="cards">
+        <div class="box">
+            <div class="box">
+                <div class="box-inner">
+                    <div class="box-front">
+                        <img src="../camille/img/lacplitvice.jpg" alt="">
+                    </div>
 
+                    <div class="box-back">
+                        <h1>Yasmine</h1><br>
+                        <p>blablabla</p><br>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-inner">
+                    <div class="box-front">
+                        <img src="/camille.jpg" alt="">
+                    </div>
 
+                    <div class="box-back">
+                        <h1>Camille</h1><br>
+                        <p>blablabla</p><br>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <?php include("footer-include.php");?>
 </body>
-
-</html>
 
 </html>

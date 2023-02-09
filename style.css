@@ -1,0 +1,130 @@
+*{
+    margin:0;
+    padding:0;
+}
+/* header */
+
+.menu {
+    margin-top: 0;
+    display: flex;
+    background-color: black;
+  }
+  .menu > li {
+    text-align: center;
+    padding: 1%;
+   
+    float: left;
+    list-style-type: none;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: rgba(1, 4, 26, 0.7);
+    cursor: pointer;
+    font-size: 17px;
+  }
+  .sub-menu {
+    transform: scale(0);
+    transform-origin: top center;
+    transition: all 300ms ease-in-out;
+  }
+  .sub-menu li {
+    font-size: 14px;
+    background: rgba(1, 0, 3, 0.726);
+    padding: 8px 0;
+    color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.489);
+    transform: scale(0);
+    transform-origin: top center;
+    transition: all 300ms ease-in-out;
+    list-style-type: none;
+  }
+  .sub-menu li:last-child {
+    border-bottom: 0;
+  }
+  .sub-menu li:hover {
+    background: rgb(0, 0, 0);
+  }
+  .menu > li:hover .sub-menu li {
+    transform: scale(1);
+  }
+  .menu > li:hover .sub-menu {
+    transform: scale(1);
+  }
+  .menu{
+    width:100%;
+}
+/* banniere bienvenue */
+.bienvenue{
+    background-image: url(img/cinerue.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    text-align: center;
+    
+    
+}
+.titre{
+    color:wheat;
+    text-align: center;
+ 
+    /* margin et padding auto pour centrer */
+   font-size: 300%;
+}
+/* cartes qui se retournent */
+.box {
+    background-color: transparent;
+    width: 400px;
+    height: 500px;
+    perspective: 1000px;
+    margin: 20px;
+  }
+  .box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    
+  }
+  .box:hover .box-inner {
+    transform: rotateY(180deg);
+  }
+  .box-front,
+  .box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+  }
+
+  .box-back {
+    background-color:#ebddd1;
+    color: black;
+    transform: rotateY(180deg);
+  }
+  .box-front img{
+    flex-shrink: 1;
+    max-width: 400px;
+    max-height: 500px;
+    border-radius: 10px;
+  }
+  .cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  }
+  /* footer */
+  footer{
+    background-color: black;
+    color: wheat;
+    text-align: center;
+    padding: 3%;
+   
+  }
+ a {
+    text-decoration: none;
+    color: wheat;
+  }
