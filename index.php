@@ -9,7 +9,7 @@
     <title>Reservation Salles</title>
 </head>
 
-<body class="body1">
+<body>
     <?php include("header-include.php"); ?>
 
     <main>
@@ -49,7 +49,9 @@
             
         </div>
     </main>
+    <footer>
     <?php include("footer-include.php"); ?>
+    </footer>
 </body>
 
 </html>

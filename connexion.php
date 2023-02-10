@@ -34,35 +34,39 @@ if (isset($_POST['submit'])) {
     <title>Reservation Salles</title>
 </head>
 
-<body class="body1">
+<body>
     <?php include("header-include.php"); ?>
-
-    <div class="container">
-        <form class='form1' method="POST"> 
-
-            <h1 class="h1from">Connexion</h1> 
-
-            <div class="field">
-                <label>Login :</label>
+<main>
+    <div class="login-box">
+        <h1>Connexion</h1>
+        <form method="POST">
+            <div class="user-box">
                 <input type="text" name="login">
+                <label>Login</label>
             </div>
-
-            <div class="field">
-                <label>Mot de passe :</label>
+            <div class="user-box">
                 <input type="password" name="password">
+                <label>Mot de passe</label>
             </div>
-
-            <div class="field">
-                <input type="submit" name="submit" value="Connexion">
-            </div>
+            <a class="button" href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <button type="submit" name="submit">Se connecter</button>
+            </a>
 
             <div class="message"><?= $message ?></div>
 
         </form>
         <div class="petitmsg">
-        <span>Vous n'avez pas encore de compte ? <a href="inscription.php">Inscrivez-vous !</a></span>
+            <span>Vous n'avez pas encore de compte ? <a class="petitmsg2" href="inscription.php">Inscrivez-vous !</a></span>
         </div>
-
+    </div>
+    </main>
+    <footer>
+    <?php include("footer-include.php"); ?>
+    </footer>
 </body>
 
 </html>
