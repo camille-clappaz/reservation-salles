@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -36,7 +36,7 @@ if (isset($_POST['submit'])) {
 
 <body>
     <?php include("header-include.php"); ?>
-<main>
+<main class="mainform">
     <div class="login-box">
         <h1>Connexion</h1>
         <form method="POST">

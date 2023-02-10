@@ -24,7 +24,7 @@ $message= "";
 
 <body>
     <?php include("header-include.php"); ?>
-<main>
+<main class="mainform">
     <div>
         <h1 class="bonjour"><?= 'Bonjour, ' . $_SESSION['login'] ?></h1>
     </div>
