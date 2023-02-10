@@ -31,7 +31,11 @@ foreach ($result2 as $key => $value){
 
     }
 }
-$lundi = date('d/m',strtotime('monday this week'));
+$lundi = date('d/m/y',strtotime('monday this week'));
+$mardi = date('d/m/y',strtotime('tuesday this week'));
+$mercredi = date('d/m/y',strtotime('wednesday this week'));
+$jeudi = date('d/m/y',strtotime('thursday this week'));
+$vendredi = date('d/m/y',strtotime('friday this week'));
 ?>
 
 <body>
@@ -42,10 +46,10 @@ $lundi = date('d/m',strtotime('monday this week'));
       <tr>
         <th></th>
         <th>Lundi <?= $lundi ?></th>
-        <th>Mardi</th>
-        <th>Mrecredi</th>
-        <th>Jeudi</th>
-        <th>Vendredi</th>
+        <th>Mardi <?= $mardi ?></th>
+        <th>Mrecredi <?= $mercredi ?></th>
+        <th>Jeudi <?= $jeudi ?></th>
+        <th>Vendredi <?= $vendredi ?></th>
       </tr>
       <tr>
         <td>8h00-9h00</td>
