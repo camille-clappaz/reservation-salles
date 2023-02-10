@@ -12,19 +12,31 @@
             <nav>
                 <ul class="menu">
                     <li><a class="list1" href="index.php">Home</a></li>
-                    <li><a class="list1" href="inscription.php">Inscription</a></li>
-                    <li><a class="list1" href="connexion.php">Connexion</a></li>
                      <?php if (isset($_SESSION['login']) == TRUE) {
                             ?> 
                     <li><a class="list1" href="profil.php">Profil</a></li>
                     <?php } 
                     ?>
+                    <?php if (isset($_SESSION['login']) != TRUE) {
+                            ?> 
+                    <li><a class="list1" href="inscription.php">Inscription</a></li>
+                    <li><a class="list1" href="connexion.php">Connexion</a></li>
+                    <?php } 
+                    ?>
+                    
+                
                     <li  class="list1">Reservation
                         <ul class="sub-menu">
                             <li><a class="list1" href="planning.php">Planning</a></li>
                             <li><a class="list1" href="reservation.php">Formulaire de réservation</a></li>
                         </ul>
                     </li>
+                    <?php if (isset($_SESSION['login']) == TRUE) {
+                            ?> 
+                    <li><a class="list1" href="deconnexion.php">Deconnexion</a></li>
+                    <?php } 
+                    ?>
+                    
                 </ul>
             </nav>
         </div>
