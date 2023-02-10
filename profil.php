@@ -20,19 +20,19 @@ if( $mysqli->connect_error ) {
     <header>
 <?php include("header-include.php"); ?>
 </header>
+
 <main>
         <?php
+        var_dump($_SESSION['id']);
         if (isset($_POST['submit'])) { // Permet de verifier la suite UNIQUEMENT si on appuie sur Submit
             //if(empty($_POST["login"]))  Si l'input est vide
-            if (!empty($_POST["login"]) && !empty($_POST["prenom"]) && !empty($_POST["nom"]) && !empty($_POST["password"])) {
+            if (!empty($_POST["login"]) && !empty($_POST["password"])) {
                 $id=$_SESSION['id'];
                 $login = $_POST['login'];
-                $prenom = $_POST['prenom'];
-                $nom = $_POST['nom'];
                 $password = $_POST['password'];
                 if ($_POST['password'] == $_POST['confirmpassword']) {//Attention si on cherche par le login, on ne pourra pas le modifier
                     //donc il faut chercher par l'id.
-                    $request = $mysqli->query("UPDATE `utilisateurs`  SET login='$login', prenom='$prenom', nom='$nom', password='$password' WHERE id LIKE'$id'");
+                    $request = $mysqli->query("UPDATE `utilisateurs`  SET login='$login', password='$password' WHERE id LIKE'$id'");
                     header('Location:index.php');
                 } else {
                     echo "Les mots de passe sont différents!";
@@ -52,29 +52,14 @@ if( $mysqli->connect_error ) {
                                                         $login = $_SESSION['login'];
                                                         echo "$login"; ?>">
       <label>Login</label>
-    </div>
-    <div class="user-box">
-      <input  type="text" name="prenom" value="<?php
-                                                        $prenom = $_SESSION['prenom'];
-                                                        echo "$prenom"; ?>">
-      <label>Prenom</label>
-    </div>
-    <div class="user-box">
-      <input  type="text" name="nom" value="<?php
-                                                        $nom = $_SESSION['nom'];
-                                                        echo "$nom"; ?>">
-      <label>Nom</label>
-    </div>
     <div class="user-box">
       <input  type="password" name="password" value="<?php
-                                                                $password = $_SESSION['password'];
-                                                                echo "$password"; ?>">
+                                                                ?>">
       <label>Password</label>
     </div>
     <div class="user-box">
       <input  type="password" name="confirmpassword" value="<?php
-                                                                        $password = $_SESSION['password'];
-                                                                        echo "$password"; ?>">
+                                                                       ?>">
       <label>Confirmation Password</label>
     </div>
     <a href="#">
