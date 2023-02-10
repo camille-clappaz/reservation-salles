@@ -43,13 +43,25 @@ if (isset($_POST['submit'])) {
         $fin = $_POST['fin'];
         $descri = $_POST['descri'];
         date_default_timezone_set('Europe/Paris');
-        $sql2 = "INSERT INTO reservations (id_utilisateur, titre, date, debut, fin, description) VALUES ('$id', $titre, '$date', $debut, $fin, '$descri')";
-        $request2 = $bd->query($sql2);
-        //header('location:planning.php');
+        $request2 = $mysqli->query("INSERT INTO reservations (id_utilisateur, titre, date, debut, fin, description) VALUES ('$id', $titre, '$date', $debut, $fin, '$descri')");
     }
     else {
         $message = "Vous devez remplir tout les champs !";
     }
+}
+if (isset($_POST['submit'])) {
+    if (!empty($_POST['titre']) && !empty($_POST['date']) && !empty($_POST['descri'])){
+        $titre = $_POST['titre'];
+        $date = $_POST['date'];
+        $debut = $_POST['debut'];
+        $fin = $_POST['fin'];
+        $descri = $_POST['descri'];
+        date_default_timezone_set('Europe/Paris');
+        $sql2 = "INSERT INTO reservations (id_utilisateur, titre, date, debut, fin, description) VALUES ('$id', $titre, '$date', $debut, $fin, '$descri')";
+        $request2 = $bd->query($sql2);
+        //header('location:planning.php');
+    }
+   
     var_dump($titre);var_dump($date);var_dump($debut);var_dump($fin);var_dump($descri);
 } 
 ?>
