@@ -170,6 +170,14 @@ a {
   height: 700px; 
   width: auto;
 }
+.mainresa {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background-color: #d0bca3;
+    height: 900px; 
+    width: auto;
+}
 
 .login-box {
   position: absolute;

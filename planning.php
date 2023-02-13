@@ -1,16 +1,12 @@
 <?php
 session_start();
-// if (!isset($_SESSION['login'])) {
-//     header('location:connexion.php');
-// }
 
 $bd = new mysqli('localhost', 'root', '', 'reservationsalles');
 $sql = 'SELECT * FROM utilisateurs INNER JOIN reservations ON utilisateurs.id=id_utilisateur';
 $request = $bd->query($sql);
 $result = $request->fetch_all(MYSQLI_ASSOC);
 $message = "";
-$_SESSION = $result[0];
-var_dump($_SESSION);
+$results = $result[0];
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +32,7 @@ $vendredi = date('d-m-Y', strtotime('friday this week'));
 
 <body>
     <?php include("header-include.php"); ?>
-
+<main>
     <div class="container">
         <table class="tab">
             <thead>
@@ -55,15 +51,15 @@ $vendredi = date('d-m-Y', strtotime('friday this week'));
 
                 for ($ligne = 8; $ligne <= 19; $ligne++) {
                     echo '<tr>';
-                    echo '<td>' . $ligne . 'h</td>';
+                    echo '<td class="ptab1">' . $ligne . 'h</td>';
                     for ($colonne = 1; $colonne <= 5; $colonne++) {
-                        echo '<td>';
+                        echo '<td class="ptab1">';
                         foreach ($result as $value) {
-                            $id = $_SESSION['id'];
+                            $id = $results['id'];
                             $jour = date("N", strtotime($value['debut']));
                             $heure =  date("H", strtotime($value['debut']));
                             if ($heure == $ligne && $jour == $colonne) {
-                                echo $value['login'] . $value['titre'];
+                                echo "Login: " . $value['login']  . '<br>' . "Titre: " . $value['titre'];
                             }
                         }
                     }
@@ -75,6 +71,7 @@ $vendredi = date('d-m-Y', strtotime('friday this week'));
 
         </table>
     </div>
+    </main>
 </body>
 
 </html>
