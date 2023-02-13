@@ -38,35 +38,20 @@ foreach ($result as $key => $value){
 if (isset($_POST['submit'])) {
     if (!empty($_POST['titre']) && !empty($_POST['date']) && !empty($_POST['descri'])){
         $titre = $_POST['titre'];
-        $date = $_POST['date'];
-        $debut = $_POST['debut'];
-        $fin = $_POST['fin'];
+        $debut = $_POST['date'] . " " . $_POST['debut'] . ":00"; 
+        $fin = $_POST['date'] . " " .  $_POST['fin'] . ":00";
         $descri = $_POST['descri'];
-        date_default_timezone_set('Europe/Paris');
-        $request2 = $mysqli->query("INSERT INTO reservations (id_utilisateur, titre, date, debut, fin, description) VALUES ('$id', $titre, '$date', $debut, $fin, '$descri')");
+        $sql2 = "INSERT INTO `reservations`(`titre`, `description`, `debut`, `fin`, `id_utilisateur`) VALUES ('$titre','$descri','$debut','$fin','$id')";
+        $request2 = $bd->query($sql2);
+        //header('location:planning.php');
     }
     else {
         $message = "Vous devez remplir tout les champs !";
     }
-}
-if (isset($_POST['submit'])) {
-    if (!empty($_POST['titre']) && !empty($_POST['date']) && !empty($_POST['descri'])){
-        $titre = $_POST['titre'];
-        $date = $_POST['date'];
-        $debut = $_POST['debut'];
-        $fin = $_POST['fin'];
-        $descri = $_POST['descri'];
-        date_default_timezone_set('Europe/Paris');
-        $sql2 = "INSERT INTO reservations (id_utilisateur, titre, date, debut, fin, description) VALUES ('$id', $titre, '$date', $debut, $fin, '$descri')";
-        $request2 = $bd->query($sql2);
-        //header('location:planning.php');
-    }
-   
-    var_dump($titre);var_dump($date);var_dump($debut);var_dump($fin);var_dump($descri);
 } 
 ?>
 
-<body class="body1">
+<body>
     <?php include("header-include.php"); ?>
 
     <div class="container">
