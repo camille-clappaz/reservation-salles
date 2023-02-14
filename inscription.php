@@ -47,40 +47,40 @@ if (isset($_POST['submit'])) {
 
 <body>
   <?php include("header-include.php"); ?>
-<main class="mainform">
-  <div class="login-box">
-    <h1>Inscription</h1>
-    <form method="POST">
-      <div class="user-box">
-        <input type="text" name="login">
-        <label>Login</label>
+  <main class="mainform">
+    <div class="login-box">
+      <h1>Inscription</h1>
+      <form method="POST">
+        <div class="user-box">
+          <input type="text" name="login">
+          <label>Login</label>
+        </div>
+
+        <div class="user-box">
+          <input type="password" name="password1">
+          <label>Mot de passe</label>
+        </div>
+
+        <div class="user-box">
+          <input type="password" name="password2">
+          <label>Confirmez le mot de passe</label>
+        </div>
+
+        <a class="button" href="#">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <button type="submit" name="submit">Inscription</button>
+        </a>
+
+        <div class="message"><?= $message ?></div>
+      </form>
+
+      <div class="petitmsg">
+        <span>Vous avez deja un compte ? <a class="petitmsg2" href="connexion.php">Connectez-vous !</a></span>
       </div>
-
-      <div class="user-box">
-        <input type="password" name="password1">
-        <label>Mot de passe</label>
-      </div>
-
-      <div class="user-box">
-        <input type="password" name="password2">
-        <label>Confirmez le mot de passe</label>
-      </div>
-
-      <a class="button" href="#">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <button type="submit" name="submit">Inscription</button>
-      </a>
-
-      <div class="message"><?= $message ?></div>
-    </form>
-
-    <div class="petitmsg">
-      <span>Vous avez deja un compte ? <a class="petitmsg2" href="connexion.php">Connectez-vous !</a></span>
     </div>
-  </div>
   </main>
   <footer>
     <?php include("footer-include.php"); ?>

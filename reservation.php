@@ -15,7 +15,7 @@ $message = "";
 <html lang="fr">
 
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -36,60 +36,110 @@ foreach ($result as $key => $value) {
     }
 }
 if (isset($_POST['submit'])) {
-    if (!empty($_POST['titre']) && !empty($_POST['date']) && !empty($_POST['descri'])) {
-        $titre = $_POST['titre'];
-        $debut = $_POST['date'] . " " . $_POST['debut'] . ":00";
-        $fin = $_POST['date'] . " " .  $_POST['fin'] . ":00";
-        $debut = $_POST['date'] . " " . $_POST['debut'] . ":00";
-        $fin = $_POST['date'] . " " .  $_POST['fin'] . ":00";
-        $descri = $_POST['descri'];
-        $sql2 = "INSERT INTO `reservations`(`titre`, `description`, `debut`, `fin`, `id_utilisateur`) VALUES ('$titre','$descri','$debut','$fin','$id')";
-        $sql2 = "INSERT INTO `reservations`(`titre`, `description`, `debut`, `fin`, `id_utilisateur`) VALUES ('$titre','$descri','$debut','$fin','$id')";
-        $request2 = $bd->query($sql2);
-        //header('location:planning.php');
+    $debutdate = $_POST['date'] . " " . $_POST['debut'] . ":00"; // recuperer la date au format date + heure
+    if (!empty($_POST['titre']) && !empty($_POST['date']) && !empty($_POST['descri'])) { // si tout les champs sont remplis
+        if ($debutdate > date('Y-m-d H:i:s')) { // si la date n'est pas dans le passé
+            $sous = $_POST['fin'] - $_POST['debut'];
+            var_dump($sous);
+            if ($sous == 1) { // si les crénaux ne sont pas plus d'une heure
+                $titre = $_POST['titre'];
+                $debut = $_POST['date'] . " " . $_POST['debut'] . ":00";
+                $fin = $_POST['date'] . " " .  $_POST['fin'] . ":00";
+                $descri = $_POST['descri'];
+                $sql2 = "INSERT INTO `reservations`(`titre`, `description`, `debut`, `fin`, `id_utilisateur`) VALUES ('$titre','$descri','$debut','$fin','$id')";
+                $request2 = $bd->query($sql2);
+                // header('location:planning.php');
+            } else {
+                $message = "Vous ne pouvez choisir que des crénaux d'une heure !";
+            }
+        } else {
+            $message = "Vous ne pouvez pas choisir une date deja passé !";
+        }
     } else {
         $message = "Vous devez remplir tout les champs !";
     }
 }
-?>
 
+?>
 
 <body>
     <?php include("header-include.php"); ?>
     <main class="mainresa">
-        <div class="login-box">
+        <div class="login-boxR">
             <h1>Formulaire de Réservation</h1>
+            
             <form method="POST">
-                <div>
-                    <label>Utilisateur: <?= $_SESSION['login'] ?></label>
+
+                <div class="user-boxR">
+                    <p>Utilisateur: <?= $_SESSION['login'] ?></p>
                 </div>
 
-                <div class="user-box">
-                    <label>Titre de la réservation :</label>
+                <div class="user-boxR">
                     <input type="text" name="titre">
+                    <label>Titre de la réservation :</label>
+
                 </div>
 
-                <div class="user-box">
-                    <label>Veuillez saisir votre date :</label>
+                <div class="user-boxR">
                     <input type="date" name="date" required pattern="\d{4}-\d{2}-\d{2}">
+
                 </div>
 
-                <div class="user-box">
-                    <label>L'heure du début :</label>
-                    <input type="time" name="debut" value="08:00">
+                <div class="user-boxR">
+
+                    <select name="debut">
+                        <option value="08">8h</option>
+                        <option value="09">9h</option>
+                        <option value="10">10h</option>
+                        <option value="11">11h</option>
+                        <option value="12">12h</option>
+                        <option value="13">13h</option>
+                        <option value="14">14h</option>
+                        <option value="15">15h</option>
+                        <option value="16">16h</option>
+                        <option value="17">17h</option>
+                        <option value="18">18h</option>
+                    </select>
+                    
                 </div>
 
-                <div class="user-box">
-                    <label>L'heure de fin :</label>
-                    <input type="time" name="fin" value="10:00">
+                <div class="user-boxR">
+
+                    <select name="fin">
+                        <option value="09">9h</option>
+                        <option value="10">10h</option>
+                        <option value="11">11h</option>
+                        <option value="12">12h</option>
+                        <option value="13">13h</option>
+                        <option value="14">14h</option>
+                        <option value="15">15h</option>
+                        <option value="16">16h</option>
+                        <option value="17">17h</option>
+                        <option value="18">18h</option>
+                        <option value="19">19h</option>
+                    </select>
+                   
                 </div>
 
-                <div class="user-box">
-                    <label>Description :</label></br>
-                    <textarea rows="10" cols="40" type="text" name="descri" placeholder="Un commentaire a nous laisser ?"></textarea>
+                <!-- <div class="user-boxR">
+                <label>L'heure du début :</label>
+                <input type="time" name="debut" value="08:00">
+            </div>
+            <div class="user-boxR">
+                <label>L'heure de fin :</label>
+                <input type="time" name="fin" value="09:00">
+            </div> -->
+
+                <div class="user-boxR">
+<h2>Description :</h2>
+               
+                    <textarea rows="5" cols="40" type="text" name="descri" 
+                   
+                    ></textarea> <br>
+                    
                 </div>
 
-                <a class="button" href="#">
+                <a class="buttonR" href="#">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -98,10 +148,13 @@ if (isset($_POST['submit'])) {
                 </a>
 
                 <div class="message"><?= $message ?></div>
-            </form>
+                </form>
+        </div>
+        
     </main>
     <footer>
-        <?php include("footer-include.php"); ?>
+        <?php include("footer-include.php");
+         ?>
     </footer>
 </body>
 
