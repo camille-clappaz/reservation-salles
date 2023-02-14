@@ -51,7 +51,7 @@ $vendredi = date('d-m-Y', strtotime('friday this week'));
 
                 for ($ligne = 8; $ligne <= 19; $ligne++) {
                     echo '<tr>';
-                    echo '<td class="ptab2">' . $ligne . 'h</td>';
+                    echo '<td class="ptab2">' . $ligne . 'h </td>';
                     for ($colonne = 1; $colonne <= 5; $colonne++) {
                         echo '<td class="ptab2">';
                         foreach ($result as $value) {
