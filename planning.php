@@ -32,45 +32,62 @@ $vendredi = date('d-m-Y', strtotime('friday this week'));
 
 <body class="plan">
     <?php include("header-include.php"); ?>
-<main>
-    <div class="container">
-        <table class="tab">
-            <thead>
-                <tr>
-                    <th class="vide"> </th>
-                    <th class="ptab1">Lundi <?= $lundi ?></th>
-                    <th class="ptab1">Mardi <?= $mardi ?></th>
-                    <th class="ptab1">Mercredi <?= $mercredi ?></th>
-                    <th class="ptab1">Jeudi <?= $jeudi ?></th>
-                    <th class="ptab1">Vendredi <?= $vendredi ?></th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
+    <main>
+        <div class="container">
+            <table class="tab">
+                <thead>
+                    <tr>
+                        <th class="vide"> </th>
+                        <th class="ptab1">Lundi <?= $lundi ?></th>
+                        <th class="ptab1">Mardi <?= $mardi ?></th>
+                        <th class="ptab1">Mercredi <?= $mercredi ?></th>
+                        <th class="ptab1">Jeudi <?= $jeudi ?></th>
+                        <th class="ptab1">Vendredi <?= $vendredi ?></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
 
 
-                for ($ligne = 8; $ligne <= 19; $ligne++) {
-                    echo '<tr>';
-                    echo '<td class="ptab2">' . $ligne . 'h</td>';
-                    for ($colonne = 1; $colonne <= 5; $colonne++) {
-                        echo '<td class="ptab2">';
-                        foreach ($result as $value) {
-                            $id = $results['id'];
-                            $jour = date("N", strtotime($value['debut']));
-                            $heure =  date("H", strtotime($value['debut']));
-                            if ($heure == $ligne && $jour == $colonne) {
-                                echo "Login: " . $value['login']  . '<br>' . "Titre: " . $value['titre'] . "</td>";
+                    for ($ligne = 8; $ligne <= 19; $ligne++) {
+                        echo '<tr>';
+                        echo '<td class="ptab2">' . $ligne . 'h</td>';
+                        for ($colonne = 1; $colonne <= 5; $colonne++) {
+                            echo '<td class="ptab2">';
+                            foreach ($result as $value) {
+                                $id = $results['id'];
+                                $jour = date("N", strtotime($value['debut']));
+                                $heure =  date("H", strtotime($value['debut']));
+                                if ($heure == $ligne && $jour == $colonne) {
+                                    echo "Login: " . $value['login']  . '<br>' . "Titre: " . $value['titre'] . '<br>' .
+                                        "<div class='details'>Détails
+                                        <div class='box2'>
+                                            <div class='box-inner2'>
+                                                    <p>$value[login]</p><br>
+                                                    <p>Titre: $value[titre]</p><br>
+                                                    <p>$value[description]</p><br>
+                                                    <p>$heure h</p><br>
+                                                    
+
+                                            </div>
+                                        </div>
+                                    </div>"
+
+                                        . '</td>';
+                                }
                             }
                         }
                     }
-                }
 
 
-                ?>
-            </tbody>
 
-        </table>
-    </div>
+
+
+                    ?>
+                </tbody>
+
+            </table>
+        </div>
     </main>
     <footer>
     <?php include("footer-include.php"); ?>
