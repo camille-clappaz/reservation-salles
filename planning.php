@@ -60,20 +60,37 @@ $vendredi = date('d-m-Y', strtotime('friday this week'));
                                 $heure =  date("H", strtotime($value['debut']));
                                 if ($heure == $ligne && $jour == $colonne) {
                                     echo "Login: " . $value['login']  . '<br>' . "Titre: " . $value['titre'] . '<br>' .
-                                        "<div class='details'>Détails
-                                        <div class='box2'>
-                                            <div class='box-inner2'>
-                                                    <p>$value[login]</p><br>
-                                                    <p>Titre: $value[titre]</p><br>
-                                                    <p>$value[description]</p><br>
-                                                    <p>$heure h</p><br>
-                                                    
+                                        "<div class='box3'>
+	                                        <a class='buttonP' href='#popup1'>Détails</a>
+                                        
 
+                                            <div id='popup1' class='overlay'>
+                                                <div class='popup'>
+                                                    <a class='close' href='#'>&times;</a>
+                                                    <div class='content'>
+                                                        <p>$value[login]</p><br>
+                                                        <p>Titre: $value[titre]</p><br>
+                                                        <p>$value[description]</p><br>
+                                                        <p>$heure h</p><br>
+                                                    </div>
+                                                </div>
+                                                
                                             </div>
-                                        </div>
-                                    </div>"
+                                        </div>". '</td>';
+                                        //                                         "<div class='details'>Détails
+                                        //                                         <div class='box2'>
+                                        //                                             <div class='box-inner2'>
+                                        //                                                     <p>$value[login]</p><br>
+                                        //                                                     <p>Titre: $value[titre]</p><br>
+                                        //                                                     <p>$value[description]</p><br>
+                                        //                                                     <p>$heure h</p><br>
 
-                                        . '</td>';
+
+                                        //                                             </div>
+                                        //                                         </div>
+                                        //                                         </div>"
+
+                                        
                                 }
                             }
                         }
@@ -89,8 +106,9 @@ $vendredi = date('d-m-Y', strtotime('friday this week'));
             </table>
         </div>
     </main>
+
     <footer>
-    <?php include("footer-include.php"); ?>
+        <?php include("footer-include.php"); ?>
     </footer>
 </body>
 
