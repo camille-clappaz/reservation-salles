@@ -30,7 +30,7 @@ $vendredi = date('d-m-Y', strtotime('friday this week'));
 
 ?>
 
-<body>
+<body class="plan">
     <?php include("header-include.php"); ?>
 <main>
     <div class="container">
@@ -51,15 +51,15 @@ $vendredi = date('d-m-Y', strtotime('friday this week'));
 
                 for ($ligne = 8; $ligne <= 19; $ligne++) {
                     echo '<tr>';
-                    echo '<td class="ptab1">' . $ligne . 'h</td>';
+                    echo '<td class="ptab2">' . $ligne . 'h</td>';
                     for ($colonne = 1; $colonne <= 5; $colonne++) {
-                        echo '<td class="ptab1">';
+                        echo '<td class="ptab2">';
                         foreach ($result as $value) {
                             $id = $results['id'];
                             $jour = date("N", strtotime($value['debut']));
                             $heure =  date("H", strtotime($value['debut']));
                             if ($heure == $ligne && $jour == $colonne) {
-                                echo "Login: " . $value['login']  . '<br>' . "Titre: " . $value['titre'];
+                                echo "Login: " . $value['login']  . '<br>' . "Titre: " . $value['titre'] . "</td>";
                             }
                         }
                     }
@@ -72,6 +72,9 @@ $vendredi = date('d-m-Y', strtotime('friday this week'));
         </table>
     </div>
     </main>
+    <footer>
+    <?php include("footer-include.php"); ?>
+    </footer>
 </body>
 
 </html>

@@ -1,30 +1,35 @@
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
 }
+
 /* header */
-.list1{
-color: wheat;
+.list1 {
+  color: wheat;
 }
+
 .nom {
-font-size: 250%;
-line-height: 120%;
-margin-top: 10%;
+  font-size: 250%;
+  line-height: 120%;
+  margin-top: 10%;
 }
+
 .description {
-font-size: 150%;
-line-height: 120%;
-margin: 5%;
+  font-size: 150%;
+  line-height: 120%;
+  margin: 5%;
 }
+
 .menu {
   margin-top: 0;
   display: flex;
   background-color: black;
 }
-.menu > li {
+
+.menu>li {
   text-align: center;
   padding: 1%;
- 
+
   float: left;
   list-style-type: none;
   width: 100%;
@@ -34,11 +39,13 @@ margin: 5%;
   cursor: pointer;
   font-size: 17px;
 }
+
 .sub-menu {
   transform: scale(0);
   transform-origin: top center;
   transition: all 300ms ease-in-out;
 }
+
 .sub-menu li {
   font-size: 14px;
   background: rgba(1, 0, 3, 0.726);
@@ -50,35 +57,42 @@ margin: 5%;
   transition: all 300ms ease-in-out;
   list-style-type: none;
 }
+
 .sub-menu li:last-child {
   border-bottom: 0;
 }
+
 .sub-menu li:hover {
   background: rgb(0, 0, 0);
 }
-.menu > li:hover .sub-menu li {
+
+.menu>li:hover .sub-menu li {
   transform: scale(1);
 }
-.menu > li:hover .sub-menu {
+
+.menu>li:hover .sub-menu {
   transform: scale(1);
 }
-.menu{
-  width:100%;
+
+.menu {
+  width: 100%;
 }
+
 /* banniere bienvenue */
-.bienvenue{
+.bienvenue {
   background-image: url(img/sallecine.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 700px;
 }
-.titre{
-display: flex;
-justify-items: center;
-align-items: center;
-justify-content: center;
-  color:wheat;
+
+.titre {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  color: wheat;
   text-align: center;
   text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.90);
   font-family: sans-serif;
@@ -86,12 +100,14 @@ justify-content: center;
   width: 100%;
   height: 100%;
 }
+
 .titre2 {
   margin: 3%;
   text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.90);
   font-family: sans-serif;
   font-size: 300%;
 }
+
 /* cartes qui se retournent */
 .box {
   background-color: transparent;
@@ -100,6 +116,7 @@ justify-content: center;
   perspective: 1000px;
   margin: 20px;
 }
+
 .box-inner {
   position: relative;
   width: 100%;
@@ -107,11 +124,13 @@ justify-content: center;
   text-align: center;
   transition: transform 0.5s;
   transform-style: preserve-3d;
-  
+
 }
+
 .box:hover .box-inner {
   transform: rotateY(180deg);
 }
+
 .box-front,
 .box-back {
   position: absolute;
@@ -122,52 +141,59 @@ justify-content: center;
 }
 
 .box-back {
-  background-color:#ebddd1;
+  background-color: #ebddd1;
   color: black;
   transform: rotateY(180deg);
 }
-.box-front img{
+
+.box-front img {
   flex-shrink: 1;
   max-width: 400px;
   max-height: 500px;
   border-radius: 10px;
 }
-.camille{
-  width:100%;
-  height:100%;
+
+.camille {
+  width: 100%;
+  height: 100%;
 }
-.cards{
-display: flex;
-flex-wrap: wrap;
-justify-content: space-around;
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
+
 /* profil */
-.bonjour{
+.bonjour {
   text-align: center;
   width: 100%;
   font-size: 400%;
 
 }
+
 /* footer */
-footer{
+footer {
   background-color: black;
   color: wheat;
   text-align: center;
   padding: 3%;
   margin-bottom: 0;
- 
+
 }
+
 a {
   text-decoration: none;
   color: wheat;
 }
+
 /* debut profil formulaire*/
 .mainform {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   font-family: sans-serif;
   background-color: #d0bca3;
-  height: 700px; 
+  height: 700px;
   width: auto;
 }
 
@@ -194,11 +220,13 @@ a {
 .login-box .user-box {
   position: relative;
 }
-button{
+
+button {
   text-decoration: none;
   background-color: transparent;
   color: wheat;
 }
+
 .login-box .user-box input {
   width: 100%;
   padding: 10px 0;
@@ -210,7 +238,9 @@ button{
   outline: none;
   background: transparent;
 }
-textarea, select{
+
+textarea,
+select {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
@@ -221,9 +251,10 @@ textarea, select{
   outline: none;
   background: transparent;
 }
+
 .login-box .user-box label {
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   padding: 10px 0;
   font-size: 16px;
@@ -232,8 +263,8 @@ textarea, select{
   transition: .5s;
 }
 
-.login-box .user-box input:focus ~ label,
-.login-box .user-box input:valid ~ label {
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label {
   top: -20px;
   left: 0;
   color: #c9ad82;
@@ -259,9 +290,9 @@ textarea, select{
   color: wheat;
   border-radius: 5px;
   box-shadow: 0 0 5px #d3d2b3,
-              0 0 25px #d3d2b3,
-              0 0 50px #d3d2b3,
-              0 0 100px #d3d2b3;
+    0 0 25px #d3d2b3,
+    0 0 50px #d3d2b3,
+    0 0 100px #d3d2b3;
 }
 
 .button span {
@@ -282,7 +313,9 @@ textarea, select{
   0% {
     left: -100%;
   }
-  50%,100% {
+
+  50%,
+  100% {
     left: 100%;
   }
 }
@@ -301,7 +334,9 @@ textarea, select{
   0% {
     top: -100%;
   }
-  50%,100% {
+
+  50%,
+  100% {
     top: 100%;
   }
 }
@@ -320,7 +355,9 @@ textarea, select{
   0% {
     right: -100%;
   }
-  50%,100% {
+
+  50%,
+  100% {
     right: 100%;
   }
 }
@@ -339,31 +376,37 @@ textarea, select{
   0% {
     bottom: -100%;
   }
-  50%,100% {
+
+  50%,
+  100% {
     bottom: 100%;
   }
 }
-button{
- border-style: none;
+
+button {
+  border-style: none;
 }
-.petitmsg{
+
+.petitmsg {
   color: white;
 }
-.petitmsg2{
+
+.petitmsg2 {
   color: rgb(185, 147, 76);
 }
+
 /* fin profil formulaire */
 
 
 /* debut resa form */
 
 .mainresa {
-    margin:0;
-    padding:0;
-    font-family: sans-serif;
-    background-color: #d0bca3;
-    height: 900px; 
-    width: auto;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #d0bca3;
+  height: 900px;
+  width: auto;
 }
 
 .login-boxR {
@@ -389,11 +432,13 @@ button{
 .login-boxR .user-boxR {
   position: relative;
 }
-buttonR{
+
+buttonR {
   text-decoration: none;
   background-color: transparent;
   color: wheat;
 }
+
 .login-boxR .user-boxR input {
   width: 100%;
   padding: 10px 0;
@@ -405,7 +450,10 @@ buttonR{
   outline: none;
   background: transparent;
 }
-textarea, select, p{
+
+textarea,
+select,
+p {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
@@ -418,20 +466,21 @@ textarea, select, p{
 
 }
 
-h2{
-    width: 100%;
-    padding: 10px 0;
-    font-size: 16px;
-    color: wheat;
-    
-    border: none;
-    
-    outline: none;
-    background: transparent;
+h2 {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: wheat;
+
+  border: none;
+
+  outline: none;
+  background: transparent;
 }
+
 .login-boxR .user-boxR label {
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   padding: 10px 0;
   font-size: 16px;
@@ -439,13 +488,14 @@ h2{
   pointer-events: none;
   transition: .5s;
 }
-option{
+
+option {
   background-color: #3d0f14;
   color: wheat;
 }
 
-.login-boxR .user-boxR input:focus ~ label,
-.login-boxR .user-boxR input:valid ~ label {
+.login-boxR .user-boxR input:focus~label,
+.login-boxR .user-boxR input:valid~label {
   top: -20px;
   left: 0;
   color: #c9ad82;
@@ -471,9 +521,9 @@ option{
   color: wheat;
   border-radius: 5px;
   box-shadow: 0 0 5px #d3d2b3,
-              0 0 25px #d3d2b3,
-              0 0 50px #d3d2b3,
-              0 0 100px #d3d2b3;
+    0 0 25px #d3d2b3,
+    0 0 50px #d3d2b3,
+    0 0 100px #d3d2b3;
 }
 
 .buttonR span {
@@ -494,7 +544,9 @@ option{
   0% {
     left: -100%;
   }
-  50%,100% {
+
+  50%,
+  100% {
     left: 100%;
   }
 }
@@ -513,7 +565,9 @@ option{
   0% {
     top: -100%;
   }
-  50%,100% {
+
+  50%,
+  100% {
     top: 100%;
   }
 }
@@ -532,7 +586,9 @@ option{
   0% {
     right: -100%;
   }
-  50%,100% {
+
+  50%,
+  100% {
     right: 100%;
   }
 }
@@ -551,36 +607,53 @@ option{
   0% {
     bottom: -100%;
   }
-  50%,100% {
+
+  50%,
+  100% {
     bottom: 100%;
   }
 }
-button{
- border-style: none;
+
+button {
+  border-style: none;
 }
-.message{
+
+.message {
   color: red;
 }
 
 /* fin resa form */
 
-/* code css pour la table */ 
+/* code css pour la table */
 .tab {
-margin-top: 4%;
-margin-left: auto;
-margin-right: auto;
-text-align: center;
-width: 50%;
-color: rgb(8, 0, 0);
-border: 1px solid rgb(0, 0, 0);
+  margin-top: 4%;
+  margin-bottom: 4%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 70%;
+  color: rgb(8, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
 }
+
 .ptab1 {
-text-align: center;
-color: rgb(0, 0, 0);
-border: 1px solid rgb(0, 0, 0);
+  font-size: 110%;
+  background-color: rgb(223, 175, 116);
+  text-align: center;
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
+  padding: 2%;
 }
+
 .ptab2 {
-text-align: center;
-color: rgb(0, 0, 0);
-border: 1px solid rgb(0, 0, 0);
+  font-size: 110%;
+  background-color: rgba(234, 188, 131, 0.856);
+  text-align: center;
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
+  padding: 1%;
+}
+
+.plan {
+  background-color: #d0bca3;
 }

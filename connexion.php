@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
     <div class="login-box">
         <h1>Connexion</h1>
         <form method="POST">
-            <div class="user-box">
+            <div class="user-box"> 
                 <input type="text" name="login">
                 <label>Login</label>
             </div>
