@@ -368,7 +368,7 @@ button{
 
 .login-boxR {
   position: absolute;
-  top: 95%;
+  top: 85%;
   left: 50%;
   width: 400px;
   padding: 40px;
@@ -389,11 +389,7 @@ button{
 .login-boxR .user-boxR {
   position: relative;
 }
-buttonR{
-  text-decoration: none;
-  background-color: transparent;
-  color: wheat;
-}
+
 .login-boxR .user-boxR input {
   width: 100%;
   padding: 10px 0;
@@ -405,7 +401,7 @@ buttonR{
   outline: none;
   background: transparent;
 }
-textarea, select, p{
+textarea, select, .userresa{
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
@@ -583,4 +579,75 @@ border: 1px solid rgb(0, 0, 0);
 text-align: center;
 color: rgb(0, 0, 0);
 border: 1px solid rgb(0, 0, 0);
+}
+
+/* planning */
+.details{
+  text-decoration: none;
+  color: black;
+}
+
+/* pop up reservation */
+.box-inner2 {
+  display: none;
+}
+
+.details:hover .box-inner2{
+  display: block;
+  border: solide 2px black;
+  position: relative;
+  width: 50%;
+  height: 50%;
+  text-align: center;
+  background-color: #ffefbc;
+  /* width: 200px;
+  height: 300px; */
+  perspective: 1000px;
+  margin: 20px;
+  border-radius: 10px;
+}
+.box2{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: transparent;
+  /* width: 400px;
+  height: 300px; */
+  perspective: 1000px;
+  margin: 20px;
+  border-radius: 10px;
+ }
+ /* code css pour la table */
+.tab {
+  margin-top: 4%;
+  margin-bottom: 4%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 70%;
+  color: rgb(8, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.ptab1 {
+  font-size: 110%;
+  background-color: rgb(223, 175, 116);
+  text-align: center;
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
+  padding: 2%;
+}
+
+.ptab2 {
+  font-size: 110%;
+  background-color: rgba(234, 188, 131, 0.856);
+  text-align: center;
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
+  padding: 1%;
+}
+
+.plan {
+  background-color: #d0bca3;
 }

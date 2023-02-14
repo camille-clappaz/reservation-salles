@@ -67,11 +67,11 @@ if (isset($_POST['submit'])) {
     <main class="mainresa">
         <div class="login-boxR">
             <h1>Formulaire de Réservation</h1>
-            
+
             <form method="POST">
 
                 <div class="user-boxR">
-                    <p>Utilisateur: <?= $_SESSION['login'] ?></p>
+                    <p class="userresa">Utilisateur: <?= $_SESSION['login'] ?></p>
                 </div>
 
                 <div class="user-boxR">
@@ -100,7 +100,7 @@ if (isset($_POST['submit'])) {
                         <option value="17">17h</option>
                         <option value="18">18h</option>
                     </select>
-                    
+
                 </div>
 
                 <div class="user-boxR">
@@ -118,7 +118,7 @@ if (isset($_POST['submit'])) {
                         <option value="18">18h</option>
                         <option value="19">19h</option>
                     </select>
-                   
+
                 </div>
 
                 <!-- <div class="user-boxR">
@@ -131,12 +131,10 @@ if (isset($_POST['submit'])) {
             </div> -->
 
                 <div class="user-boxR">
-<h2>Description :</h2>
-               
-                    <textarea rows="5" cols="40" type="text" name="descri" 
-                   
-                    ></textarea> <br>
-                    
+                    <h2>Description :</h2>
+
+                    <textarea rows="5" cols="40" type="text" name="descri"></textarea> <br>
+
                 </div>
 
                 <a class="buttonR" href="#">
@@ -148,13 +146,13 @@ if (isset($_POST['submit'])) {
                 </a>
 
                 <div class="message"><?= $message ?></div>
-                </form>
+            </form>
         </div>
-        
+
     </main>
     <footer>
         <?php include("footer-include.php");
-         ?>
+        ?>
     </footer>
 </body>
 
