@@ -653,18 +653,16 @@ border: 1px solid rgb(0, 0, 0);
 .box3 {
   width: 40%;
   margin: 0 auto;
-  padding: 35px;
+  padding: 15px;
   text-align: center;
 }
 
 .buttonP {
   font-size: 1em;
   padding: 10px;
-  color: #fff;
-  border-radius: 20px/50px;
+  color: floralwhite;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.3s ease-out;
 }
 
 .overlay {
@@ -710,47 +708,6 @@ border: 1px solid rgb(0, 0, 0);
   max-height: 30%;
   overflow: auto;
 }
-
-@media screen and (min-width: 700px){
-  .box{
-    width: 50%;
-  }
-  .popup{
-    width: 50%;
-  }
-}
-
-/* .box-inner2 {
-  display: none;
-}
-
-
-.details:hover .box-inner2{
-  display: block;
-  position: relative;
-  width: 50%;
-  height: 50%;
-  text-align: center;
-  background-color: #ffefbc;
-  width: 200px;
-  height: 300px;
-  perspective: 100px;
-  margin: 20px;
-  border-radius: 10px;
-}
-
-.box2{
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  background-color: transparent;
-  width: 400px;
-  height: 300px;
-  perspective: 1000px;
-  margin: 20px;
-  border-radius: 10px;
- } */
  /* code css pour la table */
 .tab {
   margin-top: 4%;
@@ -779,6 +736,7 @@ border: 1px solid rgb(0, 0, 0);
   color: rgb(0, 0, 0);
   border: 1px solid rgb(0, 0, 0);
   padding: 1%;
+  
 }
 
 .plan {
