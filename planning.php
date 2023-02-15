@@ -71,6 +71,7 @@ $count=0;
                                 $semaine = date("W",strtotime($value['debut']));
                                 $annee = date("o",strtotime($value['debut']));
                                 if ($heure == $ligne && $jour == $colonne  && $annee == $year  && $semaine == $week) {
+                                   $count++;
                                     echo "Login: " . $value['login']  . '<br>' . "Titre: " . $value['titre'] . '<br>' .
                                         "<div class='box3'>
 	                                        <a class='buttonP' href='#popup$count'>Détails</a>
