@@ -40,15 +40,20 @@ if (isset($_POST['submit'])) {
     if (!empty($_POST['titre']) && !empty($_POST['date']) && !empty($_POST['descri'])) { // si tout les champs sont remplis
         if ($debutdate > date('Y-m-d H:i:s')) { // si la date n'est pas dans le passé
             $sous = $_POST['fin'] - $_POST['debut'];
-            var_dump($sous);
             if ($sous == 1) { // si les crénaux ne sont pas plus d'une heure
-                $titre = $_POST['titre'];
-                $debut = $_POST['date'] . " " . $_POST['debut'] . ":00";
-                $fin = $_POST['date'] . " " .  $_POST['fin'] . ":00";
-                $descri = $_POST['descri'];
-                $sql2 = "INSERT INTO `reservations`(`titre`, `description`, `debut`, `fin`, `id_utilisateur`) VALUES ('$titre','$descri','$debut','$fin','$id')";
-                $request2 = $bd->query($sql2);
-                // header('location:planning.php');
+                $jourdelasemaine = date("l", strtotime($_POST['date']));
+                var_dump($jourdelasemaine);
+                if ($jourdelasemaine != "Saturday" && $jourdelasemaine != "Sunday") {
+                    $titre = $_POST['titre'];
+                    $debut = $_POST['date'] . " " . $_POST['debut'] . ":00";
+                    $fin = $_POST['date'] . " " .  $_POST['fin'] . ":00";
+                    $descri = $_POST['descri'];
+                    $sql2 = "INSERT INTO `reservations`(`titre`, `description`, `debut`, `fin`, `id_utilisateur`) VALUES ('$titre','$descri','$debut','$fin','$id')";
+                    $request2 = $bd->query($sql2);
+                    // header('location:planning.php');
+                } else {
+                    $message = "vous ne pouvez pas réserver le weekend, choississez une date en semaine !";
+                }
             } else {
                 $message = "Vous ne pouvez choisir que des crénaux d'une heure !";
             }
