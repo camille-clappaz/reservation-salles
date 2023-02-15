@@ -629,7 +629,7 @@ button {
 
 .ptab1 {
   font-size: 110%;
-  background-color: rgb(223, 175, 116);
+  background-color: wheat;
   text-align: center;
   color: rgb(0, 0, 0);
   border: 1px solid rgb(0, 0, 0);
@@ -660,7 +660,7 @@ border: 1px solid rgb(0, 0, 0);
 .buttonP {
   font-size: 1em;
   padding: 10px;
-  color: floralwhite;
+  color: rgb(222, 114, 6);
   text-decoration: none;
   cursor: pointer;
 }
@@ -718,6 +718,7 @@ border: 1px solid rgb(0, 0, 0);
   width: 70%;
   color: rgb(8, 0, 0);
   border: 1px solid rgb(0, 0, 0);
+  border-collapse: collapse;
 }
 
 .ptab1 {
@@ -731,14 +732,10 @@ border: 1px solid rgb(0, 0, 0);
 
 .ptab2 {
   font-size: 110%;
-  background-color: rgba(234, 188, 131, 0.856);
+  background-color: rgba(255, 244, 230, 0.856);
   text-align: center;
   color: rgb(0, 0, 0);
   border: 1px solid rgb(0, 0, 0);
   padding: 1%;
   
-}
-
-.plan {
-  background-color: #d0bca3;
 }

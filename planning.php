@@ -37,7 +37,7 @@ $vendredi = date('d-m-Y', strtotime('friday this week'));
             <table class="tab">
                 <thead>
                     <tr>
-                        <th class="vide"> </th>
+                        <th class="ptab1"> </th>
                         <th class="ptab1">Lundi <?= $lundi ?></th>
                         <th class="ptab1">Mardi <?= $mardi ?></th>
                         <th class="ptab1">Mercredi <?= $mercredi ?></th>
