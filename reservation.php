@@ -22,6 +22,7 @@ $message = "";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="styletest.css"> -->
     <title>Reservation Salles</title>
 </head>
 <?php
@@ -72,6 +73,7 @@ if (isset($_POST['submit'])) {
 
                 <div class="user-boxR">
                     <p class="userresa">Utilisateur: <?= $_SESSION['login'] ?></p>
+
                 </div>
 
                 <div class="user-boxR">
@@ -86,7 +88,7 @@ if (isset($_POST['submit'])) {
                 </div>
 
                 <div class="user-boxR">
-
+                    
                     <select name="debut">
                         <option value="08">8h</option>
                         <option value="09">9h</option>
@@ -100,7 +102,7 @@ if (isset($_POST['submit'])) {
                         <option value="17">17h</option>
                         <option value="18">18h</option>
                     </select>
-
+                    <label for="debut"> Heure de début:</label>
                 </div>
 
                 <div class="user-boxR">
@@ -118,6 +120,7 @@ if (isset($_POST['submit'])) {
                         <option value="18">18h</option>
                         <option value="19">19h</option>
                     </select>
+                    <label for="fin"> Heure de fin:</label>
 
                 </div>
 

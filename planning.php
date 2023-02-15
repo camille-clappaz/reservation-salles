@@ -58,9 +58,11 @@ $count=0;
                             foreach ($result as $value) {
                                 $id = $results['id'];
                                 $jour = date("N", strtotime($value['debut']));
-                                $heure =  date("H", strtotime($value['debut']));
+                                $heuredebut =  date("H", strtotime($value['debut']));
+                                $heurefin =  date("H", strtotime($value['fin']));
                                 
-                                if ($heure == $ligne && $jour == $colonne) {
+                                
+                                if ($heuredebut == $ligne && $jour == $colonne) {
                                     $count++;
 
                                     echo "Login: " . $value['login']  . '<br>' . "Titre: " . $value['titre'] . '<br>' .
@@ -73,7 +75,7 @@ $count=0;
                                                         <p>$value[login]</p><br>
                                                         <p>Titre: $value[titre]</p><br>
                                                         <p>$value[description]</p><br>
-                                                        <p>$heure h</p><br>
+                                                        <p>$heuredebut h - $heurefin h</p><br>
                                                     </div>
                                                 </div>
                                             </div>
