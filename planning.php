@@ -57,8 +57,9 @@ $vendredi = date('d-m-Y', strtotime('friday this week'));
                      $week = $dt->format('W');
                      $month = $dt->format('F');
 
-
+$count=0;
                     for ($ligne = 8; $ligne <= 19; $ligne++) {
+                        
                         echo '<tr>';
                         echo '<td class="ptab2">' . $ligne . 'h</td>';
                         for ($colonne = 1; $colonne <= 5; $colonne++) {
@@ -72,10 +73,8 @@ $vendredi = date('d-m-Y', strtotime('friday this week'));
                                 if ($heure == $ligne && $jour == $colonne  && $annee == $year  && $semaine == $week) {
                                     echo "Login: " . $value['login']  . '<br>' . "Titre: " . $value['titre'] . '<br>' .
                                         "<div class='box3'>
-	                                        <a class='buttonP' href='#popup1'>Détails</a>
-                                        
-
-                                            <div id='popup1' class='overlay'>
+	                                        <a class='buttonP' href='#popup$count'>Détails</a>
+                                             <div id='popup$count' class='overlay'>
                                                 <div class='popup'>
                                                     <a class='close' href='#'>&times;</a>
                                                     <div class='content'>
@@ -85,7 +84,6 @@ $vendredi = date('d-m-Y', strtotime('friday this week'));
                                                         <p>$heure h</p><br>
                                                     </div>
                                                 </div>
-                                                
                                             </div>
                                         </div>". '</td>';
                                        
@@ -94,6 +92,7 @@ $vendredi = date('d-m-Y', strtotime('friday this week'));
                                 }
                             }
                         }
+                       
                     }
 
 
