@@ -67,11 +67,13 @@ $vendredi = date('d-m-Y', strtotime('friday this week'));
                             foreach ($result as $value) {
                                 $id = $results['id'];
                                 $jour = date("N", strtotime($value['debut']));
-                                $heure =  date("H", strtotime($value['debut']));
-                                $semaine = date("W",strtotime($value['debut']));
-                                $annee = date("o",strtotime($value['debut']));
-                                if ($heure == $ligne && $jour == $colonne  && $annee == $year  && $semaine == $week) {
-                                   $count++;
+                                $heuredebut =  date("H", strtotime($value['debut']));
+                                $heurefin =  date("H", strtotime($value['fin']));
+                                
+                                
+                                if ($heuredebut == $ligne && $jour == $colonne) {
+                                    $count++;
+
                                     echo "Login: " . $value['login']  . '<br>' . "Titre: " . $value['titre'] . '<br>' .
                                         "<div class='box3'>
 	                                        <a class='buttonP' href='#popup$count'>Détails</a>
@@ -82,7 +84,7 @@ $vendredi = date('d-m-Y', strtotime('friday this week'));
                                                         <p>$value[login]</p><br>
                                                         <p>Titre: $value[titre]</p><br>
                                                         <p>$value[description]</p><br>
-                                                        <p>$heure h</p><br>
+                                                        <p>$heuredebut h - $heurefin h</p><br>
                                                     </div>
                                                 </div>
                                             </div>

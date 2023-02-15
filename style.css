@@ -405,7 +405,7 @@ button {
   padding: 0;
   font-family: sans-serif;
   background-color: #d0bca3;
-  height: 900px;
+  height: 150vh;
   width: auto;
 }
 
@@ -413,7 +413,7 @@ button {
   position: absolute;
   top: 85%;
   left: 50%;
-  width: 400px;
+  width: 30vw;
   padding: 40px;
   transform: translate(-50%, -50%);
   background: #3d0f14;
@@ -433,10 +433,21 @@ button {
   position: relative;
 }
 
+.login-boxR .user-boxR label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: wheat;
+  pointer-events: none;
+  transition: .5s;
+}
+
 .login-boxR .user-boxR input {
   width: 100%;
   padding: 10px 0;
-  font-size: 16px;
+  font-size: 3vh;
   color: wheat;
   margin-bottom: 30px;
   border: none;
@@ -457,27 +468,14 @@ textarea, select, .userresa{
 
 }
 
-h2 {
+h2 { 
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
   color: wheat;
-
   border: none;
-
   outline: none;
   background: transparent;
-}
-
-.login-boxR .user-boxR label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 10px 0;
-  font-size: 16px;
-  color: wheat;
-  pointer-events: none;
-  transition: .5s;
 }
 
 option {
@@ -492,7 +490,41 @@ option {
   color: #c9ad82;
   font-size: 12px;
 }
-
+.login-boxR .user-boxR select:focus~label,
+.login-boxR .user-boxR select:valid~label {
+  top: -20px;
+  left: 0;
+  color: #c9ad82;
+  font-size: 12px;
+}
+@media screen and (max-width: 600px){
+  .login-boxR {
+      position: absolute;
+      top: 85%;
+      left: 50%;
+      width: 80vw;
+      padding: 40px;
+      transform: translate(-50%, -50%);
+      background: #3d0f14;
+      box-sizing: border-box;
+      box-shadow: 0 15px 25px #3d0f14;
+      border-radius: 10px;
+    }
+}
+@media screen and (max-width: 1000px){
+  .login-boxR {
+      position: absolute;
+      top: 85%;
+      left: 50%;
+      width: 60vw;
+      padding: 40px;
+      transform: translate(-50%, -50%);
+      background: #3d0f14;
+      box-sizing: border-box;
+      box-shadow: 0 15px 25px #3d0f14;
+      border-radius: 10px;
+    }
+  }
 .buttonR {
   position: relative;
   display: inline-block;
@@ -598,7 +630,6 @@ option {
   0% {
     bottom: -100%;
   }
-
   50%,
   100% {
     bottom: 100%;
@@ -608,7 +639,6 @@ option {
 button {
   border-style: none;
 }
-
 .message {
   color: red;
 }
