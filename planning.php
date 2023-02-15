@@ -77,18 +77,7 @@ $vendredi = date('d-m-Y', strtotime('friday this week'));
                                                 
                                             </div>
                                         </div>". '</td>';
-                                        //                                         "<div class='details'>Détails
-                                        //                                         <div class='box2'>
-                                        //                                             <div class='box-inner2'>
-                                        //                                                     <p>$value[login]</p><br>
-                                        //                                                     <p>Titre: $value[titre]</p><br>
-                                        //                                                     <p>$value[description]</p><br>
-                                        //                                                     <p>$heure h</p><br>
-
-
-                                        //                                             </div>
-                                        //                                         </div>
-                                        //                                         </div>"
+                                       
 
                                         
                                 }
