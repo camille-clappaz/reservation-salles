@@ -57,7 +57,7 @@ $vendredi = date('d-m-Y', strtotime('friday this week'));
                      $week = $dt->format('W');
                      $month = $dt->format('F');
 
-$count=0;
+                    $count=0;
                     for ($ligne = 8; $ligne <= 19; $ligne++) {
                         
                         echo '<tr>';
