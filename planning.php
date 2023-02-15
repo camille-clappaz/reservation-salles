@@ -47,6 +47,15 @@ $vendredi = date('d-m-Y', strtotime('friday this week'));
                 </thead>
                 <tbody>
                     <?php
+                     $dt = new DateTime();
+                     if (isset($_GET['year']) && isset($_GET['week'])) {
+                         $dt->setISODate($_GET['year'], $_GET['week']);
+                     } else {
+                         $dt->setISODate($dt->format('o'), $dt->format('W'));
+                     }
+                     $year = $dt->format('o');
+                     $week = $dt->format('W');
+                     $month = $dt->format('F');
 
 
                     for ($ligne = 8; $ligne <= 19; $ligne++) {
@@ -58,7 +67,9 @@ $vendredi = date('d-m-Y', strtotime('friday this week'));
                                 $id = $results['id'];
                                 $jour = date("N", strtotime($value['debut']));
                                 $heure =  date("H", strtotime($value['debut']));
-                                if ($heure == $ligne && $jour == $colonne) {
+                                $semaine = date("W",strtotime($value['debut']));
+                                $annee = date("o",strtotime($value['debut']));
+                                if ($heure == $ligne && $jour == $colonne  && $annee == $year  && $semaine == $week) {
                                     echo "Login: " . $value['login']  . '<br>' . "Titre: " . $value['titre'] . '<br>' .
                                         "<div class='box3'>
 	                                        <a class='buttonP' href='#popup1'>Détails</a>
