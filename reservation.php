@@ -49,9 +49,10 @@ if (isset($_POST['submit'])) {
                     $debut = $_POST['date'] . " " . $_POST['debut'] . ":00";
                     $fin = $_POST['date'] . " " .  $_POST['fin'] . ":00";
                     $descri = $_POST['descri'];
-                    $sql2 = "INSERT INTO `reservations`(`titre`, `description`, `debut`, `fin`, `id_utilisateur`) VALUES ('$titre','$descri','$debut','$fin','$id')";
+                    $sql2 = "INSERT INTO `reservations`(`titre`, `description`, `debut`, `fin`, `id_utilisateur`) 
+                    VALUES ('$titre','$descri','$debut','$fin','$id')";
                     $request2 = $bd->query($sql2);
-                    // header('location:planning.php');
+                    header('location:planning.php');
                 } else {
                     $message = "vous ne pouvez pas réserver le weekend, choississez une date en semaine !";
                 }
