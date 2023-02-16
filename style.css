@@ -165,6 +165,15 @@
   width: 100%;
   font-size: 400%;
 }
+.popcorn{
+  display: flex;
+  justify-content: center;
+}
+.popcornimg{
+  width:10vw;
+  border-radius: 10vh;
+
+}
 
 /* PROFIL, CONNEXION, INSCRIPTION debut formulaire*/
 .mainform {

@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
         foreach ($result as $resultat) {
             if ($login == $resultat['login'] && $mdp == $resultat['password']) {
                 $_SESSION['login'] = $login;
-                header('location:profil.php');
+                header('location:index.php');
             } else {
                 $message = "Le login et le mot de passe ne correspendent pas !";
             }
