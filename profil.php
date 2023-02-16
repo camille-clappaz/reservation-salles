@@ -68,6 +68,8 @@ if (isset($_POST['deconnexion'])){
 
 ?>
     <div class="login-box">
+        <div class="popcorn">
+        <img class="popcornimg" src="img/popcornlunettes.jpg" alt=""></div><br>
     <h1>Modifier le profil</h1>
 
         <form  method="POST"> 
