@@ -57,10 +57,10 @@ if (isset($_POST['submit'])) {
                     $message = "vous ne pouvez pas réserver le weekend, choississez une date en semaine !";
                 }
             } else {
-                $message = "Vous ne pouvez choisir que des crénaux d'une heure !";
+                $message = "Vous ne pouvez choisir que des créneaux d'une heure !";
             }
         } else {
-            $message = "Vous ne pouvez pas choisir une date deja passé !";
+            $message = "Vous ne pouvez pas choisir une date deja passée !";
         }
     } else {
         $message = "Vous devez remplir tout les champs !";
