@@ -73,7 +73,6 @@ if (isset($_POST['submit'])) {
     <main class="mainresa">
         <div class="login-boxR">
             <h1>Formulaire de Réservation</h1>
-
             <form method="POST">
 
                 <div class="user-boxR">
@@ -93,7 +92,7 @@ if (isset($_POST['submit'])) {
                 </div>
 
                 <div class="user-boxR">
-                    
+
                     <select name="debut">
                         <option value="08">8h</option>
                         <option value="09">9h</option>
@@ -156,7 +155,6 @@ if (isset($_POST['submit'])) {
                 <div class="message"><?= $message ?></div>
             </form>
         </div>
-
     </main>
     <footer>
         <?php include("footer-include.php");

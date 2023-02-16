@@ -3,21 +3,9 @@
   padding: 0;
 }
 
-/* header */
+/* HEADER */
 .list1 {
   color: wheat;
-}
-
-.nom {
-  font-size: 250%;
-  line-height: 120%;
-  margin-top: 10%;
-}
-
-.description {
-  font-size: 150%;
-  line-height: 120%;
-  margin: 5%;
 }
 
 .menu {
@@ -29,7 +17,6 @@
 .menu>li {
   text-align: center;
   padding: 1%;
-
   float: left;
   list-style-type: none;
   width: 100%;
@@ -77,8 +64,7 @@
 .menu {
   width: 100%;
 }
-
-/* banniere bienvenue */
+/* INDEX banniere bienvenue */
 .bienvenue {
   background-image: url(img/sallecine.jpg);
   background-position: center;
@@ -108,7 +94,21 @@
   font-size: 300%;
 }
 
-/* cartes qui se retournent */
+/* INDEX cartes qui se retournent */
+.nom {
+  font-size: 250%;
+  line-height: 120%;
+  margin-top: 10%;
+}
+.description {
+  font-size: 150%;
+  line-height: 120%;
+  margin: 5%;
+}
+.camille {
+  width: 100%;
+  height: 100%;
+}
 .box {
   background-color: transparent;
   width: 400px;
@@ -153,47 +153,26 @@
   border-radius: 10px;
 }
 
-.camille {
-  width: 100%;
-  height: 100%;
-}
-
 .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-/* profil */
+/* PROFIL */
 .bonjour {
   text-align: center;
   width: 100%;
   font-size: 400%;
-
 }
 
-/* footer */
-footer {
-  background-color: black;
-  color: wheat;
-  text-align: center;
-  padding: 3%;
-  margin-bottom: 0;
-
-}
-
-a {
-  text-decoration: none;
-  color: wheat;
-}
-
-/* debut profil formulaire*/
+/* PROFIL, CONNEXION, INSCRIPTION debut formulaire*/
 .mainform {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
   background-color: #d0bca3;
-  height: 700px;
+  height: 130vh;
   width: auto;
 }
 
@@ -201,7 +180,7 @@ a {
   position: absolute;
   top: 75%;
   left: 50%;
-  width: 400px;
+  width: 30vw;
   padding: 40px;
   transform: translate(-50%, -50%);
   background: #3d0f14;
@@ -230,7 +209,7 @@ button {
 .login-box .user-box input {
   width: 100%;
   padding: 10px 0;
-  font-size: 16px;
+  font-size: 3vh;
   color: wheat;
   margin-bottom: 30px;
   border: none;
@@ -398,8 +377,7 @@ button {
 /* fin profil formulaire */
 
 
-/* debut resa form */
-
+/* RESERVATION debut resa form */
 .mainresa {
   margin: 0;
   padding: 0;
@@ -497,34 +475,7 @@ option {
   color: #c9ad82;
   font-size: 12px;
 }
-@media screen and (max-width: 600px){
-  .login-boxR {
-      position: absolute;
-      top: 85%;
-      left: 50%;
-      width: 80vw;
-      padding: 40px;
-      transform: translate(-50%, -50%);
-      background: #3d0f14;
-      box-sizing: border-box;
-      box-shadow: 0 15px 25px #3d0f14;
-      border-radius: 10px;
-    }
-}
-@media screen and (max-width: 1000px){
-  .login-boxR {
-      position: absolute;
-      top: 85%;
-      left: 50%;
-      width: 60vw;
-      padding: 40px;
-      transform: translate(-50%, -50%);
-      background: #3d0f14;
-      box-sizing: border-box;
-      box-shadow: 0 15px 25px #3d0f14;
-      border-radius: 10px;
-    }
-  }
+
 .buttonR {
   position: relative;
   display: inline-block;
@@ -672,14 +623,8 @@ color: rgb(0, 0, 0);
 border: 1px solid rgb(0, 0, 0);
 }
 
-/* planning */
-/* .details{
-  text-decoration: none;
-  color: black;
-} */
-
-
-/* pop up reservation */
+/* PLANNING */
+/* PLANNING pop-up event */
 .box3 {
   width: 40%;
   margin: 0 auto;
@@ -737,7 +682,7 @@ border: 1px solid rgb(0, 0, 0);
   max-height: 30%;
   overflow: auto;
 }
- /* code css pour la table */
+ /* PLANNING tableau */
 .tab {
   margin-top: 4%;
   margin-bottom: 4%;
@@ -768,3 +713,63 @@ border: 1px solid rgb(0, 0, 0);
   padding: 1%;
   
 }
+/* FOOTER */
+footer {
+  background-color: black;
+  color: wheat;
+  text-align: center;
+  padding: 3%;
+  margin-bottom: 0;
+
+}
+
+a {
+  text-decoration: none;
+  color: wheat;
+}
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 1000px) and (min-width: 501px){
+  .login-boxR, .login-box {
+      position: absolute;
+      top: 85%;
+      left: 50%;
+      width: 60vw;
+      padding: 40px;
+      transform: translate(-50%, -50%);
+      background: #3d0f14;
+      box-sizing: border-box;
+      box-shadow: 0 15px 25px #3d0f14;
+      border-radius: 10px;
+    }
+  }
+  @media screen and (max-width: 500px){
+    .login-boxR, .login-box {
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        width: 90vw;
+        padding: 40px;
+        transform: translate(-50%, -50%);
+        background: #3d0f14;
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px #3d0f14;
+        border-radius: 10px;
+      }
+    }
+  @media screen and (max-width: 500px){
+    .titre {
+      display: flex;
+      justify-items: center;
+      align-items: center;
+      justify-content: center;
+      color: wheat;
+      text-align: center;
+      text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.90);
+      font-family: sans-serif;
+      font-size: 200%;
+      width: 100%;
+      height: 100%;
+    }
+  }

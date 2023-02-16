@@ -41,7 +41,7 @@
 
                         <div class="box-back">
                             <h1 class="nom">Camille</h1><br>
-                            <p class="description">blablabla</p><br>
+                            <p class="description">Etudiante en développement web depuis quelques mois je suis passionnée de casses-têtes, donc suis passionnée par le code ;) </p><br>
 
                         </div>
                     </div>
