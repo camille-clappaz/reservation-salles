@@ -78,10 +78,10 @@ $vendredi = date('d-m-Y', strtotime('friday this week'));
                                                 <div class='popup'>
                                                     <a class='close' href='#'>&times;</a>
                                                     <div class='content'>
-                                                        <p>$value[login]</p><br>
+                                                        <p>Login: $value[login]</p><br>
                                                         <p>Titre: $value[titre]</p><br>
-                                                        <p>$value[description]</p><br>
-                                                        <p>$heuredebut h - $heurefin h</p><br>
+                                                        <p>Description: $value[description]</p><br>
+                                                        <p>Horaires: $heuredebut h - $heurefin h</p><br>
                                                     </div>
                                                 </div>
                                             </div> 
