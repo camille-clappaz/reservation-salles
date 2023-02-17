@@ -53,13 +53,11 @@ $vendredi = date('d-m-Y', strtotime('friday this week'));
                      } else {
                          $dt->setISODate($dt->format('o'), $dt->format('W'));
                      }
-                     $year = $dt->format('o');
-                     $week = $dt->format('W');
-                     $month = $dt->format('F');
-
+                    $year = $dt->format('o');
+                    $week = $dt->format('W');
+                    $month = $dt->format('F');
                     $count=0;
                     for ($ligne = 8; $ligne <= 19; $ligne++) {
-                        
                         echo '<tr>';
                         echo '<td class="ptab2">' . $ligne . 'h</td>';
                         for ($colonne = 1; $colonne <= 5; $colonne++) {
@@ -69,11 +67,8 @@ $vendredi = date('d-m-Y', strtotime('friday this week'));
                                 $jour = date("N", strtotime($value['debut']));
                                 $heuredebut =  date("H", strtotime($value['debut']));
                                 $heurefin =  date("H", strtotime($value['fin']));
-                                
-                                
                                 if ($heuredebut == $ligne && $jour == $colonne) {
                                     $count++;
-
                                     echo "Login: " . $value['login']  . '<br>' . "Titre: " . $value['titre'] . '<br>' .
                                         "<div class='box3'>
 	                                        <a class='buttonP' href='#popup$count'>Détails</a>
