@@ -70,7 +70,9 @@ $vendredi = date('d-m-Y', strtotime('friday this week'));
                                 if ($heuredebut == $ligne && $jour == $colonne) {
                                     $count++;
                                     echo "Login: " . $value['login']  . '<br>' . "Titre: " . $value['titre'] . '<br>' .
-                                        "<div class='box3'>
+                                        "<div class='box3'> ";
+                                        if (isset($_SESSION['login']) == TRUE){
+                                            echo "
 	                                        <a class='buttonP' href='#popup$count'>Détails</a>
                                              <div id='popup$count' class='overlay'>
                                                 <div class='popup'>
@@ -82,8 +84,8 @@ $vendredi = date('d-m-Y', strtotime('friday this week'));
                                                         <p>$heuredebut h - $heurefin h</p><br>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>". '</td>';
+                                            </div> 
+                                        </div>". '</td>'; 
                                        
 
                                         
@@ -92,7 +94,7 @@ $vendredi = date('d-m-Y', strtotime('friday this week'));
                         }
                        
                     }
-
+                }
 
 
 
