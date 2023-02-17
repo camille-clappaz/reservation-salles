@@ -113,7 +113,6 @@
   background-color: transparent;
   width: 400px;
   height: 500px;
-  perspective: 1000px;
   margin: 20px;
 }
 
@@ -124,7 +123,7 @@
   text-align: center;
   transition: transform 0.5s;
   transform-style: preserve-3d;
-
+/* preserve-3d permet de faire en sorte qu'on voit la back card */
 }
 
 .box:hover .box-inner {
@@ -396,7 +395,7 @@ button {
   width: auto;
 }
 
-.login-boxR {
+.login-boxR  {
   position: absolute;
   top: 85%;
   left: 50%;
