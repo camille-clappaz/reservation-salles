@@ -42,7 +42,7 @@ if (isset($_POST['enregistrer'])) {
         $log = $_SESSION['login'];
         $sql = "UPDATE utilisateurs SET login = '$login' WHERE id = '$id'";
         if ($request = $bd->query($sql)) {
-            $_SESSION['login']= $login;
+            $_SESSION['login'] = $login;
             header('refresh:0');
         }
     } 
